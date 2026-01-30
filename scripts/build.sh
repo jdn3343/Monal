@@ -111,6 +111,10 @@ NSUnbufferedIO=YES xcrun xcodebuild \
     -archivePath "build/ios_$APP_NAME.xcarchive" \
     -allowProvisioningUpdates \
     clean archive \
+    CODE_SIGNING_ALLOWED=NO \
+    CODE_SIGNING_REQUIRED=NO \
+    CODE_SIGN_IDENTITY="" \
+    CODE_SIGN_ENTITLEMENTS=""
     2>&1 | xcbeautify
 
 echo ""
